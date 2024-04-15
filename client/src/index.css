@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #03163b;
+  color: white;
+}
+.customDataGrid .MuiDataGrid-footerContainer {
+  background-color: #152247; /* Change background color of footer */
+}
+
+.customDataGrid .MuiDataGrid-footer {
+  color: white; /* Change text color of footer */
+}
+
