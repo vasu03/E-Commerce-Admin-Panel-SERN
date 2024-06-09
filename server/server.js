@@ -4,6 +4,11 @@ import sqlPool from "./database/dbConnection.js";
 
 // Importing our custom Routes
 import customerRoutes from "./routes/customerRoute.js";
+import productRoutes from "./routes/productRoute.js";
+import ordersRoutes from "./routes/orderRoute.js";
+import categoryRoutes from "./routes/categoryRoute.js";
+import salesRoutes from "./routes/salesRoutes.js";
+import adminRoutes from "./routes/adminRoute.js";
 
 // Creating our Express App
 const app = express();
@@ -14,6 +19,11 @@ app.use(express.urlencoded({ extended: true }));        // Middleware to parse U
 
 // Setting up our custom Routes
 app.use("/api/customers", customerRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/orders", ordersRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/sales", salesRoutes);
+app.use("/api/admins", adminRoutes);
 
 // Attempt to establish a connection to the database
 sqlPool.getConnection((err, connection) => {
